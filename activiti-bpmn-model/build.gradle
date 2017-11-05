@@ -1,0 +1,22 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+group = 'activiti'
+version = '1.0'
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+def activiti = 'D:/ProgramFolder/jars/activiti' 
+def spring = 'D:/ProgramFolder/jars/spring'
+def other = 'D:/ProgramFolder/jars/other'
+
+dependencies {
+	compile fileTree(dir: other, include: 'commons-lang3*.jar')
+	compile fileTree(dir: other, include: 'jackson-core*.jar')
+	compile fileTree(dir: other, include: 'jackson-databind*.jar')
+	compile fileTree(dir: other, include: 'junit*.jar')
+	compile fileTree(dir: other, include: 'jackson-annotations*.jar')
+	
+}
+

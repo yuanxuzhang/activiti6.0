@@ -1,0 +1,72 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+group = 'activiti'
+version = '1.0'
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+def trd = 'D:/jars/trd'
+def act = 'D:/jars/act'
+
+def activiti = 'D:/ProgramFolder/jars/activiti'
+def spring = 'D:/ProgramFolder/jars/spring'
+def other = 'D:/ProgramFolder/jars/other'
+
+
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+	compile fileTree(dir: activiti, include: 'activiti-bpmn-converter*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-bpmn-model*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-dmn-api*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-form-api*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-form-model*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-image-generator*.jar')
+	compile fileTree(dir: activiti, include: 'activiti-process-validation*.jar')
+	
+	compile fileTree(dir: spring, include: 'spring-beans*.jar')
+	compile fileTree(dir: spring, include: 'spring-core*.jar')
+	
+	compile fileTree(dir: other, include: 'assertj-core*.jar')
+	compile fileTree(dir: other, include: 'btm*.jar')
+	compile fileTree(dir: other, include: 'catch-exception*.jar')
+	compile fileTree(dir: other, include: 'commons-email*.jar')
+	compile fileTree(dir: other, include: 'commons-io*.jar')
+	compile fileTree(dir: other, include: 'commons-lang3*.jar')
+	compile fileTree(dir: other, include: 'drools-api*.jar')
+	compile fileTree(dir: other, include: 'geronimo-jta_1.1_spec*.jar')
+	compile fileTree(dir: other, include: 'groovy-all*.jar')
+	compile fileTree(dir: other, include: 'h2*.jar')
+	compile fileTree(dir: other, include: 'hamcrest-core*.jar')
+	compile fileTree(dir: other, include: 'jackson-core*.jar')
+	compile fileTree(dir: other, include: 'jackson-databind*.jar')
+	//compile fileTree(dir: other, include: 'jackson-annotations*.jar')
+	
+	compile fileTree(dir: other, include: 'java-uuid-generator*.jar')
+	compile fileTree(dir: other, include: 'javax.enterprise.concurrent-api*.jar')
+	compile fileTree(dir: other, include: 'javax.mail*.jar')
+	compile fileTree(dir: other, include: 'jcl-over-slf4j*.jar')
+	compile fileTree(dir: other, include: 'joda-time*.jar')
+	compile fileTree(dir: other, include: 'joda-time-hibernate*.jar')
+	compile fileTree(dir: other, include: 'juel-api*.jar')
+	compile fileTree(dir: other, include: 'juel-impl*.jar')
+	compile fileTree(dir: other, include: 'juel-spi*.jar')
+	compile fileTree(dir: other, include: 'junit*.jar')
+	compile fileTree(dir: other, include: 'log4j*.jar')
+	compile fileTree(dir: other, include: 'log4j-over-slf4j*.jar')
+	compile fileTree(dir: other, include: 'mockito-all*.jar')
+	compile fileTree(dir: other, include: 'mybatis*.jar')
+	compile fileTree(dir: other, include: 'mysql-connector-java*.jar')
+	compile fileTree(dir: other, include: 'persistence-api*.jar')
+	compile fileTree(dir: other, include: 'slf4j-api*.jar')
+	compile fileTree(dir: other, include: 'slf4j-log4j12*.jar')
+	compile fileTree(dir: other, include: 'subethasmtp-wiser*.jar')
+	
+}
+

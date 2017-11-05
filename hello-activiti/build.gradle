@@ -1,0 +1,29 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+group = 'activiti'
+version = '1.0'
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+def trd = 'D:/jars/trd'
+def act = 'D:/jars/act'
+
+def activiti = 'D:/jars/activiti'
+def spring = 'D:/jars/spring'
+def other = 'D:/jars/other'
+
+
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+	compile fileTree(dir: activiti, include: '*.jar', exclude: 'activiti-engine*.jar')
+	compile fileTree(dir: spring, include: '*.jar')
+	compile fileTree(dir: other, include: '*.jar')
+}
+
